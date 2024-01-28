@@ -16,7 +16,7 @@ const axios = require('axios')
 
 const salt = bcrypt.genSaltSync(10);
 const secret = "djkhgjdgkhdksf;"
-mongoose.connect('mongodb+srv://diawaisseta:ProjetsMeubles@cluster0.e0brxpv.mongodb.net/monblog');
+mongoose.connect();
 
 const app = express();
 app.use(cors({credentials:true, origin:"http://localhost:3001"}));
@@ -142,7 +142,7 @@ app.get('/post/:id', async (req, res) => {
 
 app.get('/search-books/:query', async (req, res) => {
   const {query} = req.params;
-  //const apiKey = 'AIzaSyB2TdBpCvGuKZyOvJUihcRkLyZW0yBhERY';
+  //;
 
   try {
       console.log(`Requête pour ${query} reçue.`);
